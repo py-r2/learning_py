@@ -1,3 +1,4 @@
+#Fist way of printing Fibonacci sequace
 def fibon():
     n = int(raw_input('Please enter a number till you want Fibonacci sequace to be printed out to:'))
     a,b = (0,1)
@@ -10,6 +11,7 @@ def fibon():
             a,b = b,a+b
             print a,
 fibon()
+#Second way to prin Fibonacci sequace
 '''a,b = (0,1)
 count = 0
 while count < 10:
