@@ -1,0 +1,200 @@
+t eruption
+metres	feet	Coordinates
+Anahim Peak	1897	6224	52.44°N 125.41°W	Miocene
+Armadillo Peak	2210	7251	57.53°N 130.55°W	Miocene
+Ash Mountain	2125	6550	59.27°N 130.05°W	Pleistocene
+The Ash Pit	1580	5184	57.45°N 130.78°W	Holocene
+Atwell Peak	2655	8711	49.50°N 123.33°W	Pleistocene
+Bennett Lake Volcanic Complex	1500	4900	60.3°N 134.52°W	Eocene
+Black Dome Mountain	2252	7388	51.19°N 122.29°W	Pliocene
+The Black Tusk	2319	7608	49.97°N 123.04°W	Pleistocene
+Blackfoot diatreme	-	-	49.58°N 115.17°W	-
+Big Timothy Mountain	2455	8054	52.12°N 120.91°W	Pleistocene
+Baldface Mountain	1798	5899	52.46°N 124.32°W	Pleistocene
+Mount Boucherie	758	2487	49.51°N 119.34°W	Paleocene
+Bowie Seamount	-24	-79	53.3°N 135.63°W	18000 years ago
+Mount Brew	1757	5764	50.4°N 123.19°W	Pleistocene
+Bridge River Cones	2500	8202	50.80°N 123.40°W	Holocene
+Buck Hill	1585	5200	51.48°N 119.59°W	Pleistocene
+Cache Hill	2110	6923	57.53°N 130.67°W	Holocene
+Mount Callaghan	2409	7909	50.13°N 123.15°W	-
+Camp Hill	1880	6168	57.58°N 130.78°W	Holocene
+Capricorn Mountain	2551	8369	50.62°N 123.52°W	Pleistocene
+Caribou Tuya	1770	5807	59.24°N 130.56°W	Pleistocene
+Cartoona Peak	2305	7562	57.36°N 130.36°W	Miocene
+The Castle	798	2618	49.69°N 123.2°W	Pleistocene
+Castle Rock	1862	6109	57.84°N 131.15°W	Pleistocene
+Cauldron Dome	2233	7326	50.16°N 123.32°W	Pleistocene
+Mount Cayley	2377	7799	50.12°N 123.28°W	Pleistocene
+Chakatah Creek Peak	1815	5955	59.25°N 131.03°W	Pleistocene
+Chelan Seamount	-1459	-4787	49.45°N 131.32°W	-
+Chikoida Mountain	1927	6322	59.2°N 133.4°W	Cenozoic
+Cinder Cliff	1800	5906	57.75°N 130.57°W	Holocene
+Cinder Cone	1910	6266	49.97°N 123.00°W	Holocene
+Cinder Mountain	300	984	56.57°N 130.61°W	Pleistocene
+Clinker Peak	1992	6535	49.93°N 123.4°W	9000 years ago
+Cindercone Peak	2033	6670	52.46°N 125.18°W	-
+Clisbako Caldera Complex	-	-	52.43°N 124.4°W	Eocene
+Cocoa Crater	2123	6965	57.39°N 130.42°W	Holocene
+Coffee Crater	2000	6562	57.63°N 130.67°W	Holocene
+Cottonwood Peak	1638	5374	59.40°N 130.25°W	Pleistocene
+Cracker Creek Cone	1895	5880	59.7°N 133.4°W	Holocene
+Cross diatreme	2200	7218	-	-
+Crow Lagoon	335	1099	54.7°N 130.23°W	Holocene
+Dark Mountain	1974	6476	58.64°N 129.35°W	Pleistocene
+Dellwood Seamounts	-1474	-4836	50.37°N 130.42°W	-
+Devastator Peak	2327	7635	50.59°N 123.53°W	Pleistocene
+Dome Mountain	1754	5755	58.45°N 129.59°W	Pleistocene
+Mount Downton	2375	7792	52.42°N 124.51°W	Pleistocene
+Dragon Cone	1830	6000	51.8°N 119.98°W	Holocene
+Dufferin Island	50	164	52.22°N 128.32°W	Holocene
+Mount Edziza	2787	9144	57.72°N 130.63°W	Pleistocene
+Mount Edziza volcanic complex	2787	9144	57.72°N 130.63°W	Holocene
+Ember Ridge	2348	7703	50.8°N 123.23°W	Pliocene
+Enid Creek Cone	1914	6280	58.38°N 129.52°W	Pleistocene
+Eve Cone	1702	5584	57.82°N 130.67°W	700 AD
+Exile Hill	1874	6148	57.38°N 130.82°W	Pliocene
+Explorer Seamount	-830	-2723	49.5°N 130.48°W	-
+Mount Fee	2162	7093	50.90°N 123.24°W	Pleistocene
+Fiftytwo Ridge	1866	6188	51.93°N 119.89°W	Pleistocene
+Mount Fitzgerald	2641	8665	51.31°N 126.3°W	-
+Flatiron	730	2395	51.88°N 120.5°W	Pleistocene
+Flourmill Cone	1495	4905	52.5°N 120.32°W	Holocene
+Franklin Glacier Volcano	2252	7388	51.20°N 125.24°W	Pliocene
+Gabrielse Cone	1600	5249	59.44°N 130.46°W	Holocene
+Gage Hill	1090	3576	52.5°N 120.1°W	Pleistocene
+Mount Garibaldi	2678	8786	49.84°N 123.1°W	Holocene
+Glacier Dome	2225	7300	57.77°N 130.58°W	Pleistocene
+Glacier Pikes	2145	7037	49.89°N 122.85°W	Pleistocene
+Graham Seamount	-1474	-4836	53.14°N 134.31°W	-
+Grizzly Butte	1412	4633	50.3°N 119.6°W	Holocene
+HP diatreme	2400	7874	51.41°N 116.57°W	-
+Haddington Island	-	-	50.36°N 127.2°W	Pliocene
+Heart Peaks	2012	6601	58.60°N 131.97°W	Pleistocene
+Heck Seamount	1320	4331	48.3°N 130.1°W	-
+Helmet Peak	318	1043	52.35°N 128.35°W	Holocene
+Hodgkins Seamount	-790	-2592	53.3°N 136.5°W	Pliocene
+Hoodoo Mountain	1850	6070	56.78°N 131.28°W	7050 years ago
+Hyalo Ridge	2012	6601	52.11°N 120.36°W	Pleistocene
+IGC Centre	2074	6804	57.56°N 130.62°W	Miocene
+Ice Peak	2526	8287	57.70°N 130.63°W	Holocene
+Icefall Cone	2285	7497	57.70°N 130.6°W	Holocene
+Ida Ridge	1981	6499	51.8°N 119.94°W	Pleistocene
+Ilgachuz Range	2410	7907	52.47°N 125.19°W	Pliocene
+Iskut-Unuk River Cones	1880	6168	56.52°N 130.33°W	1800?
+Isspah Butte	1673	5489	59.4°N 131.18°W	Pleistocene
+Itcha Mountain	2290	7513	52.43°N 124.49°W	Pleistocene
+Itcha Range	2375	7792	52.42°N 124.5°W	Pleistocene
+Jack's Jump	1895	6217	52.12°N 120.5°W	Pleistocene
+Mount Job	2493	8180	50.62°N 123.55°W	Pleistocene
+Mount Josephine	1767	5797	59.6°N 130.7°W	Pleistocene
+Kana Cone	1100	3609	57.90°N 130.62°W	Holocene
+Kawdy Mountain	1936	6352	58.88°N 131.23°W	Pleistocene
+Keda Cone	1980	6496	57.6°N 130.68°W	Holocene
+Mount Kinch	2470	8104	51.25°N 126.10°W	-
+Kitasu Hill	235	771	52.50°N 128.73°W	Holocene
+Klastline Cone	1400	4593	57.78°N 130.5°W	Pleistocene
+Klinkit Creek Peak	1519	4984	59.47°N 131.28°W	Pleistocene
+Klinkit Lake Peak	1516	4974	59.49°N 131.1°W	Pleistocene
+Kostal Cone	1440	4724	52.17°N 119.94°W	1550 (?)
+Level Mountain	2190	7185	58.25°N 131.21°W	Holocene?
+Lightning Peak	2139	7018	49.88°N 118.53°W	Pliocene
+Little Bear Mountain	1180	3875	56.80°N 131.3°W	Pleistocene
+Little Eagle Cone	1545	5069	58.52°N 129.71°W	Pleistocene
+Little Ring Mountain	2165	7103	50.16°N 123.18°W	Unknown
+Llangorse Mountain	1962	6437	59.32°N 132.9°W	Cenozoic
+Lone Butte	1237	4058	51.33°N 131.11°W	Miocene
+Mount MacKenzie	2143	7031	52.37°N 126.5°W	Miocene
+Machmel River Cone	1800	5906	51.51°N 126.21°W	Holocene
+Maitland Volcano	2514	8248	57.4°N 129.7°W	Pliocene
+Maquinna	-2500	-8202	-	Holocene
+Mathews Tuya	1676	5499	59.20°N 130.43°W	Pleistocene
+McLeod Hill	1284	4213	52.02°N 120.01°W	Pleistocene
+Mount Meager	2680	8793	50.63°N 123.5°W	2350 years ago
+Meehaz Mountain	1608	5276	59.1°N 131.27°W	Pleistocene
+Meszah Peak	2166	7106	58.48°N 131.43°W	Pleistocene
+Moraine Cone	2135	7005	57.77°N 130.62°W	Holocene
+Mosquito Mound	1065	3494	52.02°N 120.18°W	Pleistocene
+Nahta Cone	1690	5545	57.32°N 130.82°W	Holocene
+Nanook Dome	2710	8891	57.72°N 130.6°W	Pleistocene
+Nazko Cone	1230	4035	52.55°N 123.44°W	7200 years ago
+Nuthinaw Mountain	1732	5682	58.47°N 131.3°W	Pleistocene
+Mount Noel	2541	8337	50.42°N 122.51°W	Miocene
+Opal Cone	1736	5696	49.82°N 122.97°W	9300 years ago
+Oshawa Seamount	2127	6978	53.14°N 134.31°W	-
+Ospika pipe	1550	5085	56.27°N 123.45°W	-
+Outcast Hill	1800	5906	57.23°N 130.46°W	Pleistocene
+Mount Overill	2354	7723	51.28°N 126.7°W	-
+Pali Dome	1767	5797	50.13°N 123.25°W	Pleistocene
+Peak 1924	1565	5135	59.4°N 130.38°W	Pleistocene
+Peak 2050	2036	6680	59.39°N 130.18°W	Pleistocene
+Peak 2166	2064	6800	59.31°N 130.59°W	Pleistocene
+Peirce Seamount	-1800	-5906	53.44°N 136.32°W	-
+Perkin's Pillar	2430	7972	50.37°N 123.31°W	-
+Pharaoh Dome	2200	7218	57.65°N 130.6°W	Pleistocene
+Pillow Creek	1829	6001	52.02°N 119.84°W	Pleistocene
+Pillow Ridge	2400	7874	57.76°N 130.64°W	Pleistocene
+Plinth Peak	2677	8783	50.64°N 123.51°W	2350 years ago
+Pointed Stick Cone	1820	5971	52.24°N 120.08°W	Holocene
+Powder Mountain	2347	7700	50.8°N 123.16°W	-
+Mount Price	2052	6732	49.92°N 123.3°W	9000 years ago
+Pylon Peak	2481	8140	50.35°N 123.31°W	Pleistocene
+Pyramid Dome	2199	7215	57.77°N 130.57°W	Pleistocene
+Pyramid Mountain	240	1103	51.99°N 120.1°W	Pleistocene
+Pyroclastic Peak	2349	7707	50.6°N 123.17°W	Pleistocene
+Rainbow Range	2495	8186	52.43°N 125.46°W	Miocene
+Ray Mountain	2050	6726	52.24°N 120.11°W	Pleistocene
+Ridge Cone	2285	7497	57.68°N 130.62°W	Holocene
+Ring Mountain	2192	7192	50.13°N 123.17°W	Unknown
+Round Mountain	1646	5400	49.45°N 123.1°W	Pleistocene
+Ruby Mountain	1895	6217	59.68°N 123.33°W	1898?
+Satah Mountain	1921	6302	52.28°N 124.41°W	Unknown
+The Saucer	1920	6299	57.63°N 130.63°W	Holocene
+Seminole Seamount	-1653	-5423	49.46°N 129.5°W	-
+Sezill Volcano	2050	6726	57.59°N 130.62°W	Miocene
+Sham Hill	60	197	50.9°N 123.52°W	Pleistocene
+Sidas Cone	1540	5052	57.87°N 130.63°W	Holocene
+Mount Silverthrone	3160	10367	51.31°N 126.6°W	Unknown
+Silverthrone Caldera	3160	10367	51.26°N 126.18°W	Unknown
+Skoatl Point	1640	5381	51.9°N 120.25°W	-
+Slag Hill	2088	6850	50.19°N 123.3°W	Pleistocene
+Sleet Cone	1783	5850	57.78°N 130.55°W	Holocene
+Mount Somolenko	2658	8720	51.28°N 126.6°W	-
+Source Hill	1630	5348	57.28°N 130.82°W	Pleistocene
+South Tuya	1829	5637	59.2°N 130.5°W	Pleistocene
+Spanish Bonk	1770	5807	52.13°N 120.37°W	Pleistocene
+Spanish Lake Centre	1770	5807	52.07°N 120.31°W	Holocene
+Spanish Mump	1800	5906	52.16°N 120.33°W	Pleistocene
+Spectrum Range	2430	7972	57.26°N 130.41°W	Unknown
+The Sphinx	1525	5003	49.93°N 122.85°W	Pleistocene
+Sphinx Dome	2380	7808	57.75°N 130.58°W	Pleistocene
+Stirni Seamount	-1710	-5610	49.8°N 132.18°W	-
+Stockton Hill	1574	5164	51.10°N 120.33°W	-
+Storm Cone	2135	7005	57.77°N 130.63°W	Holocene
+The Table	1645	5397	49.9°N 123.2°W	Pleistocene
+Tadeda Peak	2194	7198	57.54°N 130.61°W	Miocene
+Tadekho Hill	1860	6102	57.35°N 130.78°W	Pleistocene
+Tennena Cone	2350	7710	57.68°N 130.67°W	Holocene
+The Thumb	1854	6083	56.16°N 126.7°W	Unknown
+Toozaza Peak	2182	7182	59.50°N 130.3°W	Pleistocene
+Tow Hill	125	410	54.4°N 131.47°W	Pliocene
+Triangle Dome	2680	8793	57.72°N 130.65°W	Pleistocene
+Triplex Cone	1785	5856	57.80°N 130.62°W	Holocene
+Tseax Cone	600	1969	55.12°N 126.9°W	1750-1775
+Tsekone Ridge	1920	6299	57.77°N 130.69°W	Pleistocene
+Tuber Hill	2500	8202	50.93°N 123.44°W	Pleistocene
+Tucker Seamount	-1242	-4075	49.5°N 133.3°W	-
+Tutsingale Mountain	1722	5650	58.78°N 130.87°W	Pleistocene
+Tuya Butte	1685	5528	59.13°N 130.55°W	Pleistocene
+Tuzo Wilson Seamounts	-1410	-4626	51.4°N 130.9°W	Holocene
+Twin Cone	1430	4692	57.70°N 130.64°W	Holocene
+Union Seamount	-293	-961	49.35°N 132.45°W	-
+Volcanic Creek Cone	1600	5249	59.75°N 133.45°W	Holocene
+The Volcano	1330	4364	56.42°N 130.85°W	1880 (?)
+Vulcan's Thumb	2290	7500	50.11°N 123.29°W	Pleistocene
+Watts Point volcanic centre	240	800	49.65°N 123.21°W	Pleistocene
+Wetalth Ridge	1830	6004	57.32°N 130.78°W	Pleistocene
+White Creek Cone	1712	5617	52.55°N 124.84°W	Pleistocene
+White Horse Bluff	200	6200	51.90°N 120.11°W	Pleistocene
+Williams Cone	2080	6824	57.78°N 130.6°W	1350 years ago
+Yeda Peak	2263	7425	57.38°N 130.68°W	Pliocene
