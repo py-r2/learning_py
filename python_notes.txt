@@ -1,0 +1,4 @@
+Virtual environment
+  -pip install virtualenv
+  -python -m venv virtual_folder_name
+=====================================
