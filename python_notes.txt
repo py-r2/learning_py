@@ -1,4 +1,15 @@
 Virtual environment
   -pip install virtualenv
   -python -m venv virtual_folder_name
+
+  -conda create --name MyVirtualEnv python=3.6 #This will create a MyVirtualEnv virtual env and initiate this env every time it starts up with python vers.3.6
+  -conda info --envs #This command will show you all virtual env you have created on your system
+  -activate MyVirtualEnv #This will activate your selected MyVirtualEnv virtual env
+  -deactivate MyVirtualEnv #This will deactivate your selected MyVirtualEnv virtual env
+
+Note: Activation in PS over Anaconda doesn't work so you'll have to do a workaround:
+A quick workaround if you're directly using powershell is to type:
+- cmd into powershell to get internally into Command Prompt
+- activate MyVirtualEnv
+- powershell to get back
 =====================================
