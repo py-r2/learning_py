@@ -22,7 +22,7 @@ t1.grid(row=1,column=2)
 
 l1 = Label(window, text="Enter website:",font=("Helvetica", 10),fg="blue")
 l1.grid(row=0,column=1)
-l2 = Label(window, text="Websites list blocked:",font=("Helvetica", 10),fg="blue")
+l2 = Label(window, text="Websites list blocked:",font=("Helvetica", 10),fg="green")
 l2.grid(row=0,column=2)
 
 window.mainloop()
