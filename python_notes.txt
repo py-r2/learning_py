@@ -13,3 +13,9 @@ A quick workaround if you're directly using powershell is to type:
 - activate MyVirtualEnv
 - powershell to get back
 =====================================
+Packaging the scripts into exe file
+
+  -pip install pyinstaller
+  -pyinstaller --onefile -windowed script_name.py
+    --onefile #it only creates one exe file
+    --windowed #is not going to show you the black command window on the background of your program
