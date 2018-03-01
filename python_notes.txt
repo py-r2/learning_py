@@ -1,4 +1,4 @@
-Virtual environment
+=wiVirtual environment
   -pip install virtualenv
   -python -m venv virtual_folder_name
 
@@ -19,3 +19,17 @@ Packaging the scripts into exe file
   -pyinstaller --onefile -windowed script_name.py
     --onefile #it only creates one exe file
     --windowed #is not going to show you the black command window on the background of your program
+=====================================
+Git commands from cmd after you install git and configure user.name and user.email
+
+1.download and install
+2.set up user.name = git config --global user.name "py-r2"
+3.set up user.email = git config --global user.email "your email here"
+
+-verify ignored files
+git ls-files --others -i --exclude-standard
+-delete history
+git add yourIgnoredFile
+git rm --cached fileToRemoveFromHistory
+git commit --amend -CHEAD
+git push
