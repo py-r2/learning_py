@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>682</width>
-    <height>382</height>
+    <width>659</width>
+    <height>408</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
        <set>Qt::AlignHCenter|Qt::AlignTop</set>
       </property>
       <item row="0" column="0" colspan="2">
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="label_bkstorelabel">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -46,7 +46,7 @@
        </widget>
       </item>
       <item row="1" column="0" colspan="2">
-       <widget class="QListView" name="listView">
+       <widget class="QListView" name="listView_records">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
           <horstretch>0</horstretch>
@@ -62,7 +62,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QTextBrowser" name="textBrowser">
+       <widget class="QTextBrowser" name="textBrowser_notes">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -72,7 +72,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLabel" name="label_8">
+       <widget class="QLabel" name="label_notes">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -96,9 +96,9 @@
      </layout>
     </item>
     <item row="0" column="0">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="pushButton_view">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -109,28 +109,52 @@
      </widget>
     </item>
     <item row="0" column="4">
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="pushButton_update">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Update</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="pushButton_add">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Add item</string>
       </property>
      </widget>
     </item>
     <item row="0" column="3">
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="pushButton_search">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Search</string>
       </property>
      </widget>
     </item>
     <item row="0" column="5">
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="pushButton_delete">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Delete</string>
       </property>
@@ -139,7 +163,7 @@
     <item row="1" column="0" colspan="2">
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="label_title">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -162,10 +186,10 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="lineEdit_title"/>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label_author">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -188,10 +212,10 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="lineEdit_author"/>
       </item>
       <item row="2" column="0">
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="label_year">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -214,10 +238,10 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="lineEdit_year"/>
       </item>
       <item row="3" column="0">
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="label_isbn">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -240,10 +264,10 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLineEdit" name="lineEdit_4"/>
+       <widget class="QLineEdit" name="lineEdit_isbn"/>
       </item>
       <item row="4" column="0">
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="label_datein">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -266,7 +290,7 @@
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QDateEdit" name="dateEdit">
+       <widget class="QDateEdit" name="dateEdit_datein">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -292,7 +316,7 @@
        </widget>
       </item>
       <item row="5" column="0">
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="label_dateout">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -315,7 +339,7 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QDateEdit" name="dateEdit_2">
+       <widget class="QDateEdit" name="dateEdit_dateout">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -366,7 +390,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>682</width>
+     <width>659</width>
      <height>21</height>
     </rect>
    </property>
