@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>659</width>
-    <height>408</height>
+    <height>446</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,32 +45,6 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
-       <widget class="QListView" name="listView_records">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="baseSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QTextBrowser" name="textBrowser_notes">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-       </widget>
-      </item>
       <item row="2" column="1">
        <widget class="QLabel" name="label_notes">
         <property name="sizePolicy">
@@ -90,6 +64,26 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QTextBrowser" name="textBrowser_notes">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QTableView" name="tableView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
        </widget>
       </item>

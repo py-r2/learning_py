@@ -11,12 +11,6 @@ from bkstore_bck import Database
 
 database=Database('library.db')
 
-def insert_command():
-    database.insert(title_text.get(),author_text.get(),year_text.get(),isbn_text.get())
-    list1.delete(0,END)
-    new_record=(title_text.get(),author_text.get(),year_text.get(),isbn_text.get())
-    list1.insert(END,new_record)
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -104,7 +98,8 @@ class Ui_MainWindow(object):
         self.pushButton_add.setSizePolicy(sizePolicy)
         self.pushButton_add.setObjectName("pushButton_add")
         self.gridLayout.addWidget(self.pushButton_add, 0, 1, 1, 1)
-        self.pushButton_add.clicked.connect(database.insert_command)
+        #========================================================
+        self.pushButton_add.clicked.connect(self.insert_command)
 #Search button
         self.pushButton_search = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -332,6 +327,14 @@ class Ui_MainWindow(object):
         self.actionDate_In.setText(_translate("MainWindow", "Date_In"))
         self.actionNotes.setText(_translate("MainWindow", "Notes"))
         self.actionAbout_us.setText(_translate("MainWindow", "About us"))
+
+    def insert_command(self):
+        database.insert(self.lineEdit_title.text(),self.lineEdit_author.text(),self.lineEdit_year.text(),self.lineEdit_isbn.text())
+#        self.listView_records.delete(0,END)
+        new_record=(self.lineEdit_title.text(),self.lineEdit_author.text(),self.lineEdit_year.text(),self.lineEdit_isbn.text())
+        self.model=QStandardItemModel(listView_records)
+        self.model.appendRow(END,new_record)
+
 
 
 if __name__ == "__main__":
