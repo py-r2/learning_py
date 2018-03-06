@@ -5,7 +5,7 @@ import math
 while True:
 
     decimals = int(raw_input('Please enter a decimals number between 1 - 30:'))
-#    x = 9876 # the bigger x is the most accurate pi will be
+#    x = 9876 # the bigger x the most accurate pi will be
 #    pi = x * math.sin(math.radians(180 / x))
     pi = '3.141592653589793238462643383279'
     if decimals >= 1 and decimals <= 30:
