@@ -3,7 +3,9 @@
 # Created by: PyQt5 UI code generator 5.6
 ################################################
 from PyQt5 import QtCore, QtGui, QtWidgets
+from bs_bk import Database
 
+database = Database('library.db')
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -36,6 +38,7 @@ class Ui_MainWindow(object):
         self.formLayout_3.setLabelAlignment(QtCore.Qt.AlignCenter)
         self.formLayout_3.setFormAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.formLayout_3.setObjectName("formLayout_3")
+#Label bookstore
         self.label_bkstorelabel = QtWidgets.QLabel(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -60,6 +63,7 @@ class Ui_MainWindow(object):
         self.label_bkstorelabel.setAlignment(QtCore.Qt.AlignCenter)
         self.label_bkstorelabel.setObjectName("label_bkstorelabel")
         self.formLayout_3.setWidget(0, QtWidgets.QFormLayout.SpanningRole, self.label_bkstorelabel)
+#Table widget
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -75,6 +79,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_notes.sizePolicy().hasHeightForWidth())
+#label for Notes
         self.label_notes.setSizePolicy(sizePolicy)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -94,6 +99,7 @@ class Ui_MainWindow(object):
         self.label_notes.setAlignment(QtCore.Qt.AlignCenter)
         self.label_notes.setObjectName("label_notes")
         self.formLayout_3.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.label_notes)
+#text browser for Notes
         self.textBrowser_notes = QtWidgets.QTextBrowser(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -103,6 +109,7 @@ class Ui_MainWindow(object):
         self.textBrowser_notes.setObjectName("textBrowser_notes")
         self.formLayout_3.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.textBrowser_notes)
         self.gridLayout.addLayout(self.formLayout_3, 1, 3, 1, 3)
+#pushButton for View All
         self.pushButton_view = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -111,6 +118,7 @@ class Ui_MainWindow(object):
         self.pushButton_view.setSizePolicy(sizePolicy)
         self.pushButton_view.setObjectName("pushButton_view")
         self.gridLayout.addWidget(self.pushButton_view, 0, 0, 1, 1)
+#pushButton for Update
         self.pushButton_update = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -119,6 +127,7 @@ class Ui_MainWindow(object):
         self.pushButton_update.setSizePolicy(sizePolicy)
         self.pushButton_update.setObjectName("pushButton_update")
         self.gridLayout.addWidget(self.pushButton_update, 0, 4, 1, 1)
+#pushButton for Add
         self.pushButton_add = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -127,6 +136,10 @@ class Ui_MainWindow(object):
         self.pushButton_add.setSizePolicy(sizePolicy)
         self.pushButton_add.setObjectName("pushButton_add")
         self.gridLayout.addWidget(self.pushButton_add, 0, 1, 1, 1)
+#==============================================================================
+        self.pushButton_add.clicked.connect(self.insert_command)
+
+#pushButton for Search
         self.pushButton_search = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -135,6 +148,7 @@ class Ui_MainWindow(object):
         self.pushButton_search.setSizePolicy(sizePolicy)
         self.pushButton_search.setObjectName("pushButton_search")
         self.gridLayout.addWidget(self.pushButton_search, 0, 3, 1, 1)
+#pushButton for Delete
         self.pushButton_delete = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -145,6 +159,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.pushButton_delete, 0, 5, 1, 1)
         self.formLayout = QtWidgets.QFormLayout()
         self.formLayout.setObjectName("formLayout")
+#label for Title
         self.label_title = QtWidgets.QLabel(self.centralwidget)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -166,9 +181,11 @@ class Ui_MainWindow(object):
         self.label_title.setIndent(0)
         self.label_title.setObjectName("label_title")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label_title)
+#lineEdit for Title
         self.lineEdit_title = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_title.setObjectName("lineEdit_title")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit_title)
+#label for Author
         self.label_author = QtWidgets.QLabel(self.centralwidget)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -190,9 +207,11 @@ class Ui_MainWindow(object):
         self.label_author.setIndent(0)
         self.label_author.setObjectName("label_author")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_author)
+#lineEdit for Author
         self.lineEdit_author = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_author.setObjectName("lineEdit_author")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lineEdit_author)
+#label for Year
         self.label_year = QtWidgets.QLabel(self.centralwidget)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -214,9 +233,11 @@ class Ui_MainWindow(object):
         self.label_year.setIndent(0)
         self.label_year.setObjectName("label_year")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_year)
+#lineEdit for Year
         self.lineEdit_year = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_year.setObjectName("lineEdit_year")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEdit_year)
+#label for ISBN
         self.label_isbn = QtWidgets.QLabel(self.centralwidget)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -238,9 +259,11 @@ class Ui_MainWindow(object):
         self.label_isbn.setIndent(0)
         self.label_isbn.setObjectName("label_isbn")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_isbn)
+#lineEdit for ISBN
         self.lineEdit_isbn = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_isbn.setObjectName("lineEdit_isbn")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.lineEdit_isbn)
+#label for Date_in
         self.label_datein = QtWidgets.QLabel(self.centralwidget)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -262,6 +285,7 @@ class Ui_MainWindow(object):
         self.label_datein.setIndent(0)
         self.label_datein.setObjectName("label_datein")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_datein)
+#dateEdit for Date_in
         self.dateEdit_datein = QtWidgets.QDateEdit(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -273,6 +297,7 @@ class Ui_MainWindow(object):
         self.dateEdit_datein.setCalendarPopup(True)
         self.dateEdit_datein.setObjectName("dateEdit_datein")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.dateEdit_datein)
+#label for Date_out
         self.label_dateout = QtWidgets.QLabel(self.centralwidget)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -294,6 +319,7 @@ class Ui_MainWindow(object):
         self.label_dateout.setIndent(0)
         self.label_dateout.setObjectName("label_dateout")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_dateout)
+#dateEdit for Date_out
         self.dateEdit_dateout = QtWidgets.QDateEdit(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -305,11 +331,13 @@ class Ui_MainWindow(object):
         self.dateEdit_dateout.setCalendarPopup(True)
         self.dateEdit_dateout.setObjectName("dateEdit_dateout")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.dateEdit_dateout)
+
         self.line = QtWidgets.QFrame(self.centralwidget)
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.formLayout.setWidget(6, QtWidgets.QFormLayout.SpanningRole, self.line)
+#graphicsView for viewing picture
         self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
         self.graphicsView.setObjectName("graphicsView")
         self.formLayout.setWidget(7, QtWidgets.QFormLayout.SpanningRole, self.graphicsView)
@@ -320,6 +348,7 @@ class Ui_MainWindow(object):
         self.line_2.setObjectName("line_2")
         self.gridLayout.addWidget(self.line_2, 1, 2, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
+#menubar
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 680, 21))
         self.menubar.setObjectName("menubar")
@@ -402,6 +431,14 @@ class Ui_MainWindow(object):
         self.actionNotes.setText(_translate("MainWindow", "Notes"))
         self.actionAbout_us.setText(_translate("MainWindow", "About us"))
 
+    def insert_command(self):
+        database.insert(self.lineEdit_title.text(),self.lineEdit_author.text(),
+        self.lineEdit_year.text(),self.lineEdit_isbn.text())
+#        self.listView_records.delete(0,END)
+        new_record=(self.lineEdit_title.text(),self.lineEdit_author.text(),
+        self.lineEdit_year.text(),self.lineEdit_isbn.text())
+        # self.model=QStandardItemModel(self.listView_records)
+        # self.model.appendRow(END,new_record)
 
 if __name__ == "__main__":
     import sys
