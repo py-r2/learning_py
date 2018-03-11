@@ -434,7 +434,6 @@ class Ui_MainWindow(object):
     def insert_command(self):
         database.insert(self.lineEdit_title.text(),self.lineEdit_author.text(),
         self.lineEdit_year.text(),self.lineEdit_isbn.text())
-#        self.listView_records.delete(0,END)
         new_record=(self.lineEdit_title.text(),self.lineEdit_author.text(),
         self.lineEdit_year.text(),self.lineEdit_isbn.text())
         # self.model=QStandardItemModel(self.listView_records)

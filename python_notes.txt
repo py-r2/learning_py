@@ -38,3 +38,10 @@ PYQT designer
 
 To compile file.ui into file.py after you finished up your UI file you'll have to run this below command:
 =>filePathToTheScript\pyuic5.bat -x fileName.ui -o fileName.py
+=======================================
+SQLite database
+
+>sqlite3 databaseName.db
+>.mode column;
+>.headers yes;
+>SELECT * FROM tableName;

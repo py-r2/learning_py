@@ -8,18 +8,34 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
+from bstore_back import Database
 
+database = Database('library.db')
 class Ui_MainWindow(object):
+
     def loadData(self):
-        connection = sqlite3.connect('library.db')
-        query = "SELECT * FROM book"
-        result = connection.execute(query)
         self.tableWidget.setRowCount(0)
-        for row_number, row_data in enumerate(result):
+        for row_number, row_data in enumerate(database.view()):
             self.tableWidget.insertRow(row_number)
             for column_number, data in enumerate(row_data):
                 self.tableWidget.setItem(row_number,column_number,QtWidgets.QTableWidgetItem(str(data)))
-        connection.close()
+
+    def insertData(self):
+        database.insert(self.lineEdit_title.text(),self.lineEdit_author.text(),
+        self.lineEdit_year.text(),self.lineEdit_isbn.text(),self.dateEdit_datein.text(),self.dateEdit_dateout.text())
+
+    # def deleteData(self):
+    #     database.delete()
+    #     #delete selected row from tableWidget
+    #             index = QtCore.QPersistentModelIndex(self.tableWidget.model().index(row, column))
+    #                 button.clicked.connect(
+    #                     lambda *args, index=index: self.handleButton(index))
+    # 
+    #         def handleButton(self, index):
+    #             print('button clicked:', index.row())
+    #             if index.isValid():
+    #                 self.table.removeRow(index.row())
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -69,6 +85,10 @@ class Ui_MainWindow(object):
         self.pushButton_add.setSizePolicy(sizePolicy)
         self.pushButton_add.setObjectName("pushButton_add")
         self.gridLayout.addWidget(self.pushButton_add, 0, 1, 1, 1)
+#Insering text values from lineEdit Widgets into the database
+        self.pushButton_add.clicked.connect(self.insertData)
+#########################################################
+
         self.pushButton_update = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -86,7 +106,7 @@ class Ui_MainWindow(object):
         self.pushButton_view.setObjectName("pushButton_view")
         self.gridLayout.addWidget(self.pushButton_view, 0, 0, 1, 1)
 
-###############################################
+#Loading data from database to the QTableWidget table
         self.pushButton_view.clicked.connect(self.loadData)
 ###################################################
 
@@ -348,6 +368,14 @@ class Ui_MainWindow(object):
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setRowCount(10)
         self.tableWidget.setColumnCount(6)
+#change of tableWidget Horizontal header name
+        column_labels = ["Title", "Author", "Year", "ISBN", "Date_In", "Date_Out"]
+        self.tableWidget.setHorizontalHeaderLabels(column_labels)
+#        self.tableWidget.horizontalHeader().setStretchLastSection(0)
+#        self.tableWidget.resizeColumnsToContents()
+
+#########################################################
+
         self.tableWidget.setObjectName("tableWidget")
         self.formLayout_3.setWidget(1, QtWidgets.QFormLayout.SpanningRole, self.tableWidget)
         self.gridLayout.addLayout(self.formLayout_3, 2, 0, 1, 5)

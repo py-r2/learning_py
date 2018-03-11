@@ -775,6 +775,15 @@
         <property name="columnCount">
          <number>6</number>
         </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
         <row/>
         <row/>
         <row/>
@@ -791,6 +800,11 @@
         <column/>
         <column/>
         <column/>
+        <item row="0" column="0">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>
