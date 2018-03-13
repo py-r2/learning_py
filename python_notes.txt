@@ -45,3 +45,10 @@ SQLite database
 >.mode column;
 >.headers yes;
 >SELECT * FROM tableName;
+*******************************************************************
+PostgreSQL
+
+pip install flask
+pip install psycopg2PrecompileFileFromA.whlFile
+pip install Flask-SQLAlchemy (this library is much better then psycopg2
+because you don't have to connect and close connection to your database like in psycopg2)
