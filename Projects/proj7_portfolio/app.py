@@ -2,25 +2,29 @@ from flask import Flask, render_template, url_for, request
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLAlCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres123@localhost/articles'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres123@localhost/articles'
 db = SQLAlchemy(app)
 
 class loadArticle(db.Model):
     __tablename__="data"
     id = db.Column(db.Integer, primary_key=True)
+    user_name = db.Column(db.String(20))
+    title = db.Column(db.String(30), unique=True)
+    article = db.Column(db.String(1000))
+    date_posted = db.Column(db.String(20))
+
+    def __init__(self,user_name,title,article,date):
+        self.user_name = user_name
+        self.title = title
+        self.article = article
+        self.date = date
+
+class loadUserData(db.Model):
+    __tablename__="userdata"
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(15), unique=True)
     password = db.Column(db.String(20))
     email = db.Column(db.String(50), unique=True)
-    title = db.Column(db.String(30), unique=True)
-    article = db.Column(db.String(120))
-#    created_at = db.Column(db.DateTime, default=datetime.now())
-
-# def __init__(self,username,password,email,title,article):
-#     self.username=username
-#     self.password=password
-#     self.email=email
-#     self.title=title
-#     self.article=article
 
 @app.route('/')
 def home():
@@ -28,7 +32,8 @@ def home():
 
 @app.route('/articles')
 def articles():
-    return render_template('articles.html')
+    alldata = loadArticle.query.all()
+    return render_template('articles.html', alldata = alldata)
 
 @app.route('/projects')
 def projects():
@@ -42,17 +47,18 @@ def about():
 def loadarticle():
     return render_template('load-article.html')
 
-@app.route('/write', methods=['POST'])
+@app.route('/write', methods=['GET','POST'])
 def write_to_database():
     if request.method == 'POST':
+        name = request.form["user_name"]
         title = request.form["article_title"]
         article = request.form["article_body"]
-        if (db.session.query(loadArticle).filter(loadArticle.title==title).count == 0):
-            load_article = loadArticle(title,article)
+        date = request.form["date_posted"]
+        if db.session.query(loadArticle).filter(loadArticle.title==title).count() == 0:
+            load_article = loadArticle(name,title,article,date)
             db.session.add(load_article)
-            db.commit()
-            return render_template("articles.html")
-        pass
+            db.session.commit()
+        return '<h1> New article has been created.</h1>'
     return render_template('write-article.html')
 
 if __name__=='__main__':
