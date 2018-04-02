@@ -1,5 +1,7 @@
 from flask import Flask, render_template, url_for, request
 from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, Integer, DateTime
+import datetime
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres123@localhost/articles'
@@ -11,7 +13,7 @@ class loadArticle(db.Model):
     user_name = db.Column(db.String(20))
     title = db.Column(db.String(30), unique=True)
     article = db.Column(db.String(1000))
-    date_posted = db.Column(db.String(20))
+    date_posted = db.Column(db.Date(), default=datetime.datetime.now)
 
     def __init__(self,user_name,title,article,date):
         self.user_name = user_name
@@ -45,6 +47,7 @@ def about():
 
 @app.route('/loadarticle')
 def loadarticle():
+    # articles = loadArticle.query.article
     return render_template('load-article.html')
 
 @app.route('/write', methods=['GET','POST'])
@@ -53,10 +56,10 @@ def write_to_database():
         name = request.form["user_name"]
         title = request.form["article_title"]
         article = request.form["article_body"]
-        date = request.form["date_posted"]
+        date = datetime.datetime.now() #request.form["date_posted"]
         if db.session.query(loadArticle).filter(loadArticle.title==title).count() == 0:
-            load_article = loadArticle(name,title,article,date)
-            db.session.add(load_article)
+            store_article = loadArticle(name,title,article,date)
+            db.session.add(store_article)
             db.session.commit()
         return '<h1> New article has been created.</h1>'
     return render_template('write-article.html')
