@@ -34,26 +34,18 @@
                 <div>
 
                     <div>
-                      {% for article in articles %}
-                      <div class="article">{{article|safe}}</div>
-                      {% endfor %}
 
-                      {% for item in alldata %}
+                      {% for item in loadpost %}
                       <h1>{{item.title}}</h1>
                       <p>{{item.article}}</p>
-                      <p>Published on: {{item.date_posted}}</p>
+                      <p>This article was published on {{item.date_posted}}</p>
                       {% endfor %}
 
-                    <!-- <h1>Sunny Day</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-                    <p>Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p> -->
                     </div>
 
                     <hr>
-                    <p>This article was published on 2016-11-01.</p>
-                    <p><a href="..">« View all articles</a></p>
+                    <p>Here you can add some message.</p>
+                    <p><a href="{{ url_for('articles') }}">« View all articles</a></p>
 
                 </div>
             </div>

@@ -45,10 +45,11 @@ def projects():
 def about():
     return render_template('about.html')
 
-@app.route('/loadarticle')
-def loadarticle():
+@app.route('/loadarticle/<article_id>')
+def loadarticle(article_id):
+    loadpost = loadArticle.query.filter_by(id=article_id).all()
     # articles = loadArticle.query.article
-    return render_template('load-article.html')
+    return render_template('load-article.html', loadpost = loadpost)
 
 @app.route('/write', methods=['GET','POST'])
 def write_to_database():

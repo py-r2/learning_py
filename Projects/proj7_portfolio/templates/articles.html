@@ -35,7 +35,7 @@
 
                   <h1>My Blog Articles</h1>
                   {% for item in alldata %}
-                  <h2><a href="{{ url_for('loadarticle')}}">{{item.title}}</a></h2>
+                  <h2><a href="{{ url_for('loadarticle',article_id=item.id) }}">{{item.title}}</a></h2>
                   <p>{{item.article}}</p>
                   <p>Published on: {{item.date_posted}}</p>
                   {% endfor %}
