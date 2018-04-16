@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'bs_gui.ui'
-#
 # Created by: PyQt5 UI code generator 5.6
-#
-# WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
@@ -20,22 +15,37 @@ class Ui_MainWindow(object):
             for column_number, data in enumerate(row_data):
                 self.tableWidget.setItem(row_number,column_number,QtWidgets.QTableWidgetItem(str(data)))
 
+    def searchData(self):
+        self.tableWidget.setRowCount(0)
+        for row_number, row_data in enumerate(database.search(self.lineEdit_title.text(),
+        self.lineEdit_author.text(),self.lineEdit_year.text(),self.lineEdit_isbn.text())):
+            self.tableWidget.insertRow(row_number)
+            for column_number, data in enumerate(row_data):
+                self.tableWidget.setItem(row_number,column_number,QtWidgets.QTableWidgetItem(str(data)))
+
+
     def insertData(self):
         database.insert(self.lineEdit_title.text(),self.lineEdit_author.text(),
-        self.lineEdit_year.text(),self.lineEdit_isbn.text(),self.dateEdit_datein.text(),self.dateEdit_dateout.text())
+        self.lineEdit_year.text(),self.lineEdit_isbn.text(),
+        self.dateEdit_datein.text(),self.dateEdit_dateout.text())
 
-    # def deleteData(self):
-    #     database.delete()
-    #     #delete selected row from tableWidget
-    #             index = QtCore.QPersistentModelIndex(self.tableWidget.model().index(row, column))
-    #                 button.clicked.connect(
-    #                     lambda *args, index=index: self.handleButton(index))
-    # 
-    #         def handleButton(self, index):
-    #             print('button clicked:', index.row())
-    #             if index.isValid():
-    #                 self.table.removeRow(index.row())
+        self.tableWidget.setRowCount(0)
+        for row_number, row_data in enumerate(database.view()):
+            self.tableWidget.insertRow(row_number)
+            for column_number, data in enumerate(row_data):
+                self.tableWidget.setItem(row_number,column_number,QtWidgets.QTableWidgetItem(str(data)))
 
+    def deleteData(self):
+        current_id = self.tableWidget.currentRow()
+        for row_number, row_data in enumerate(database.view()):
+            if row_number == current_id:
+                database.delete(row_data[3])
+
+        self.tableWidget.setRowCount(0)
+        for row_number, row_data in enumerate(database.view()):
+            self.tableWidget.insertRow(row_number)
+            for column_number, data in enumerate(row_data):
+                self.tableWidget.setItem(row_number,column_number,QtWidgets.QTableWidgetItem(str(data)))
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -77,6 +87,10 @@ class Ui_MainWindow(object):
         self.pushButton_search.setSizePolicy(sizePolicy)
         self.pushButton_search.setObjectName("pushButton_search")
         self.gridLayout.addWidget(self.pushButton_search, 0, 2, 1, 1)
+#Searching for item into database
+        self.pushButton_search.clicked.connect(self.searchData)
+##############################################################
+
         self.pushButton_add = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -105,7 +119,6 @@ class Ui_MainWindow(object):
         self.pushButton_view.setSizePolicy(sizePolicy)
         self.pushButton_view.setObjectName("pushButton_view")
         self.gridLayout.addWidget(self.pushButton_view, 0, 0, 1, 1)
-
 #Loading data from database to the QTableWidget table
         self.pushButton_view.clicked.connect(self.loadData)
 ###################################################
@@ -118,6 +131,10 @@ class Ui_MainWindow(object):
         self.pushButton_delete.setSizePolicy(sizePolicy)
         self.pushButton_delete.setObjectName("pushButton_delete")
         self.gridLayout.addWidget(self.pushButton_delete, 0, 4, 1, 1)
+#Deleting QTableWidget selected row from database
+        self.pushButton_delete.clicked.connect(self.deleteData)
+###########################################################
+
         self.formLayout = QtWidgets.QFormLayout()
         self.formLayout.setHorizontalSpacing(6)
         self.formLayout.setVerticalSpacing(0)
@@ -368,12 +385,10 @@ class Ui_MainWindow(object):
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setRowCount(10)
         self.tableWidget.setColumnCount(6)
+
 #change of tableWidget Horizontal header name
         column_labels = ["Title", "Author", "Year", "ISBN", "Date_In", "Date_Out"]
         self.tableWidget.setHorizontalHeaderLabels(column_labels)
-#        self.tableWidget.horizontalHeader().setStretchLastSection(0)
-#        self.tableWidget.resizeColumnsToContents()
-
 #########################################################
 
         self.tableWidget.setObjectName("tableWidget")

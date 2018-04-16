@@ -9,7 +9,7 @@ db=SQLAlchemy(weblogin)
 class loadData(db.Model):
     __tablename__="data"
     id=db.Column(db.Integer, primary_key=True)
-    username_=db.Column(db.String(120), unique=True)
+    username_=db.Column(db.String(120))
     password_=db.Column(db.String(20), unique=True)
     email_=db.Column(db.String(120), unique=True)
     company_=db.Column(db.String(120))

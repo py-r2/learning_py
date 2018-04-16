@@ -1,4 +1,5 @@
-=wiVirtual environment
+Create a virtual environment
+
   -pip install virtualenv
   -python -m venv virtual_folder_name
 
@@ -48,7 +49,16 @@ SQLite database
 *******************************************************************
 PostgreSQL
 
-pip install flask
-pip install psycopg2PrecompileFileFromA.whlFile
-pip install Flask-SQLAlchemy (this library is much better then psycopg2
+After you download and install PostgreSQL you'll have to open PGAdmin and connect to a local server
+(create first a script that creates a db instance of SQLAlchemy) and into PgAdmin you'll have to create your first database.
+
+>pip install flask
+>pip install psycopg2PrecompileFileFromA.whlFile (only if installing psycopg2 will fail)
+>pip install Flask-SQLAlchemy (this library is much better then psycopg2
 because you don't have to connect and close connection to your database like in psycopg2)
+>pip install flask-login
+
+Then go to cmd and create a table into your database by typing in:
+>python
+>from scriptName import db
+>db.create_all()
