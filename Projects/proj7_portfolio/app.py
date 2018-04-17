@@ -11,7 +11,7 @@ class loadArticle(db.Model):
     __tablename__="data"
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(20))
-    title = db.Column(db.String(30), unique=True)
+    title = db.Column(db.String(200), unique=True)
     article = db.Column(db.String(1000))
     date_posted = db.Column(db.Date(), default=datetime.datetime.now)
 
