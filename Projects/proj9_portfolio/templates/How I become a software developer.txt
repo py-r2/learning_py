@@ -1,0 +1,7 @@
+Hi, I'm Romeo Rauta – a Python-Flask software engineer from Calgary, Canada
+
+My journey as a developer started back in 1993 in the University. Then life drove me to SysAdmin rather until...  when I had a challenge to accomplish a free Python online course on CodeAcademy. Was enough for me to dive in to this wonderful world and continued with few other Python, Flask, SQL, Linux etc. courses on Udemy.
+
+The next step was to find guidance on to what skills to acquire and to create a portfolio.
+
+For guidance I asked everyone I found online or around me and had anything to do with programming. As for the portfolio I found lots of online resources built one Python-Flask-PostgreSQL login app with sign-up option and this portfolio website.

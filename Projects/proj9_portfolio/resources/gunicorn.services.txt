@@ -1,0 +1,18 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=rrauta
+Group=www-data
+RuntimeDirectory=gunicorn
+WorkingDirectory=/home/rrauta/apps/portfolio
+ExecStart=/home/rrauta/apps/portfolio/venv/bin/gunicorn --pid /run/gunicorn/pid$
+--bind unix:/run/gunicorn/socket wsgi:app
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

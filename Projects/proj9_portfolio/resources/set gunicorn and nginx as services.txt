@@ -1,0 +1,76 @@
+Systemd
+A tool that is starting to be common on linux systems is Systemd. Below are configurations files and instructions for using systemd to create a unix socket for incoming Gunicorn requests. Systemd will listen on this socket and start gunicorn automatically in response to traffic. Later in this section are instructions for configuring Nginx to forward web traffic to the newly created unix socket:
+========================================
+/etc/systemd/system/gunicorn.service:
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+PIDFile=/run/gunicorn/pid
+User=someuser
+Group=someuser
+RuntimeDirectory=gunicorn
+WorkingDirectory=/home/someuser/applicationroot
+ExecStart=/usr/bin/gunicorn --pid /run/gunicorn/pid   \
+          --bind unix:/run/gunicorn/socket applicationname.wsgi
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+===========================================
+/etc/systemd/system/gunicorn.socket:
+
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn/socket
+
+[Install]
+WantedBy=sockets.target
+===========================================
+
+/etc/tmpfiles.d/gunicorn.conf:
+
+d /run/gunicorn 0755 someuser somegroup -
+===========================================
+
+Next enable the socket so it autostarts at boot:
+
+systemctl enable gunicorn.socket
+Either reboot, or start the services manually:
+
+systemctl start gunicorn.socket
+After running curl --unix-socket /run/gunicorn/socket http, Gunicorn should start and you should see some HTML from your server in the terminal.
+
+You must now configure your web proxy to send traffic to the new Gunicorn socket. Edit your nginx.conf to include the following:
+===========================================
+/etc/nginx/nginx.conf:
+
+...
+http {
+    server {
+        listen          8000;
+        server_name     127.0.0.1;
+        location / {
+            proxy_pass http://unix:/run/gunicorn/socket;
+        }
+    }
+}
+...
+Note
+
+The listen and server_name used here are configured for a local machine. In a production server you will most likely listen on port 80, and use your URL as the server_name.
+
+Now make sure you enable the nginx service so it automatically starts at boot:
+
+systemctl enable nginx.service
+Either reboot, or start Nginx with the following command:
+
+systemctl start nginx
+Now you should be able to test Nginx with Gunicorn by visiting http://127.0.0.1:8000/ in any web browser. Systemd is now set up
