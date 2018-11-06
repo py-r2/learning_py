@@ -37,7 +37,7 @@
 
                       {% for item in loadpost %}
                       <h1>{{item.title}}</h1>
-                      <p>{{item.article}}</p>
+                      <div class="article_format">{{item.article|safe}}</div>
                       <p>This article was published on {{item.date_posted}}</p>
                       {% endfor %}
 

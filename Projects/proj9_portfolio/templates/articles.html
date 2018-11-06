@@ -17,7 +17,7 @@
                <a><img src="../static/img/code.jpeg" alt="" class="pure-img-responsive"></a>
                <div class="header-index">
                     <h1 class="brand-title">Romeo Rauta</h1>
-                    <h2 class="brand-tagline">Python-Flask Engineer</h2>
+                    <h2 class="brand-tagline">Python-Flask Developer</h2>
 
                     <nav class="nav">
                         <ul class="nav-list">
@@ -36,7 +36,7 @@
                   <h1>My Blog Articles</h1>
                   {% for item in alldata %}
                   <h2><a href="{{ url_for('loadarticle',article_id=item.id) }}">{{item.title}}</a></h2>
-                  <p>{{item.article}}</p>
+                  <p>{{item.article|truncate}}</p>
                   <p>Published on: {{item.date_posted}}</p>
                   {% endfor %}
 

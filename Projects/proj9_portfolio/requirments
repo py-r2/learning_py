@@ -1,0 +1,5 @@
+#requirements file
+
+flask
+flask-sqlalchemy
+psycopg2

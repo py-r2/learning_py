@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, DateTime
 import datetime
 
@@ -12,7 +12,7 @@ class loadArticle(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(20))
     title = db.Column(db.String(200), unique=True)
-    article = db.Column(db.String(1000))
+    article = db.Column(db.String(3000))
     date_posted = db.Column(db.Date(), default=datetime.datetime.now)
 
     def __init__(self,user_name,title,article,date):
@@ -48,7 +48,6 @@ def about():
 @app.route('/loadarticle/<article_id>')
 def loadarticle(article_id):
     loadpost = loadArticle.query.filter_by(id=article_id).all()
-    # articles = loadArticle.query.article
     return render_template('load-article.html', loadpost = loadpost)
 
 @app.route('/write', methods=['GET','POST'])
@@ -57,13 +56,38 @@ def write_to_database():
         name = request.form["user_name"]
         title = request.form["article_title"]
         article = request.form["article_body"]
-        date = datetime.datetime.now() #request.form["date_posted"]
+        date = datetime.datetime.now()
         if db.session.query(loadArticle).filter(loadArticle.title==title).count() == 0:
             store_article = loadArticle(name,title,article,date)
             db.session.add(store_article)
             db.session.commit()
-        return '<h1> New article has been created.</h1>'
+            return '<h1> New article has been created.</h1>'
+        else:
+            return '<h1> There is one another article with this title in your database already! </h1>'
     return render_template('write-article.html')
+
+@app.route('/edit', methods=['GET','POST'])
+def edit_to_database():
+    all_articles = loadArticle.query.all()
+    if request.method == 'POST':
+        name_new = request.form["user_name"]
+        title_new = request.form["article_title"]
+        article_new = request.form["article_body"]
+        date_new = datetime.datetime.now()
+        data_id = request.form["article_id"]
+        if db.session.query(loadArticle).filter(loadArticle.title==title_new).count() == 1:
+            loadArticle.query.filter_by(id=data_id).delete()
+            store_article = loadArticle(name_new,title_new,article_new,date_new)
+            db.session.add(store_article)
+            db.session.commit()
+            return '<h1> Your article has been updated.</h1>'
+    return render_template('edit-article.html' , all_articles = all_articles)
+
+@app.route('/editarticle/<article_id>')
+def editarticle(article_id):
+    data = loadArticle.query.filter_by(id=article_id).all()
+    return render_template('edit-article.html' , data = data)
+
 
 if __name__=='__main__':
     app.run(debug=True)
