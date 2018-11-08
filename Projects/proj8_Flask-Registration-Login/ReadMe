@@ -1,0 +1,37 @@
+Flask-Registration-Login application
+
+Technologies used:
+- Bootstrap to generate html forms and elements
+- Flask for the framework
+- PostgreSQL for database
+- Atom as file editor
+- Git and GitHub for version control
+- Ubuntu 16 as operating system
+
+Description:
+The application has a Home landing page that uses Bootstrap CSS design and
+has a top menu with 3 buttons:Home, Login, SignUp. The Login page will log you
+in to a Dashboard page while Registration will give you the option to create
+an account with username, password, email and company fields. User account
+data is going to be stored in to PostgreSQL database.
+For security reasons this application it's using werkzeug.security module to
+generate password hash and to check password hash.
+
+Pre-requisites:
+Before being able to run this application you'll have to create a PostgreSQL
+database on to your computer named portfolio_website with default username
+'postgres' and no login password.
+
+Create a virtual environment and install software packages
+  $virtualenv -p python3 name_of_virtual_env
+  $source path/to/name_of_virtual_env/bin/activate
+  (name_of_virtual_env)$pip install flask
+  (name_of_virtual_env)$pip install flask_sqlalchemy
+  (name_of_virtual_env)$pip install flask_login
+  (name_of_virtual_env)$pip install flask_wtf
+  (name_of_virtual_env)$pip install flask_bootstrap
+  (name_of_virtual_env)$pip install psycopg2
+
+Test:
+Run application and localhost:5000 on your browser to test
+  (name_of_virtual_env)$python app.py
