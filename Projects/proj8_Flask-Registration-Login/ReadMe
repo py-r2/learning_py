@@ -14,8 +14,7 @@ has a top menu with 3 buttons:Home, Login, SignUp. The Login page will log you
 in to a Dashboard page while Registration will give you the option to create
 an account with username, password, email and company fields. User account
 data is going to be stored in to PostgreSQL database.
-For security reasons this application it's using werkzeug.security module to
-generate password hash and to check password hash.
+For security (to generate/check password hash) we used werkzeug.security module.
 
 Pre-requisites:
 Before being able to run this application you'll have to create a PostgreSQL
