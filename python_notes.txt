@@ -24,7 +24,7 @@ Packaging the scripts into exe file
 Git commands from cmd after you install git and configure user.name and user.email
 
 1.download and install
-2.set up user.name = git config --global user.name "py-r2"
+2.set up user.name = git config --global user.name "yourusername"
 3.set up user.email = git config --global user.email "your email here"
 
 -verify ignored files
