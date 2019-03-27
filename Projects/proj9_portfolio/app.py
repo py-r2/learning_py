@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, DateTime
 import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://sisadmin:s1sadmin!@localhost/portfolio_website'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres123@localhost/portfolio_website'
 db = SQLAlchemy(app)
 
 class loadArticle(db.Model):
