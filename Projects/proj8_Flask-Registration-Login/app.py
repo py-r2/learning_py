@@ -8,8 +8,8 @@ from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://sisadmin:s1sadmin!@localhost/portfolio_website'
-app.config['SECRET_KEY']='thisissecret'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:postgres123@localhost/portfolio_website'
+app.config['SECRET_KEY']='thisisnotthe right secret phrase'
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
