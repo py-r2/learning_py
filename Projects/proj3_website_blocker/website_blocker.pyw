@@ -1,7 +1,6 @@
 import time
 from datetime import datetime as dt
 
-#hosts_temp = r"C:\Users\admin\Documents\GitHub\learning_py\Projects\proj3_website_blocker\hosts"
 hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
 redirect = "127.0.0.1"
 website_list = ["www.facebook.com","www.sistech.ca","facebook.com","sistech.ca"]
